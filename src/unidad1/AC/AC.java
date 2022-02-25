@@ -17,23 +17,27 @@ public class AC {
     }
 
     public void warm() {
-        if (this.temperature == this.maxTemperature) {
-            System.out.println("CALENTAR: Se ha alcanzado la temperatura máxima.");
+        if (this.temperature + this.increment >= this.maxTemperature) {
+            System.out.println("CALENTAR: Se ha alcanzado la temperatura máxima: " + this.maxTemperature);
+            this.temperature = this.maxTemperature;
+            return;
         } else {
             this.temperature = this.temperature + this.increment;
         }
 
-        System.out.println("CALENTAR: Temperatura actual:" + this.temperature);
+        System.out.println("CALENTAR: Temperatura actual: " + this.temperature);
     }
 
     public void cool() {
-        if (this.temperature == this.minTemperature) {
-            System.out.println("ENFRIAR: Se ha alcanzado la temperatura mínima.");
+        if (this.temperature - this.increment <= this.minTemperature) {
+            System.out.println("ENFRIAR: Se ha alcanzado la temperatura mínima: " + this.minTemperature);
+            this.temperature = this.minTemperature;
+            return;
         } else {
             this.temperature = this.temperature - this.increment;
         }
 
-        System.out.println("ENFRIAR: Temperatura actual:" + this.temperature);
+        System.out.println("ENFRIAR: Temperatura actual: " + this.temperature);
     }
 
     public int getTemperature() {
