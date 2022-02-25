@@ -18,10 +18,10 @@ public class Main {
         System.out.println("============================");
 
         AC ac2 = new AC(10, 30);
-        IntStream.range(0, 4).forEach(i -> ac1.warm());
-        IntStream.range(0, 5).forEach(i -> ac1.cool());
-        ac1.setIncrement(-10);
-        IntStream.range(0, 3).forEach(i -> ac1.warm());
-        IntStream.range(0, 3).forEach(i -> ac1.cool());
+        IntStream.range(0, 4).forEach(i -> ac2.warm());
+        IntStream.range(0, 5).forEach(i -> ac2.cool());
+        ac2.setIncrement(-10);
+        IntStream.range(0, 3).forEach(i -> ac2.warm());
+        IntStream.range(0, 3).forEach(i -> ac2.cool());
     }
 }
