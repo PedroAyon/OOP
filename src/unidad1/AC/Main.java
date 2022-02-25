@@ -17,6 +17,7 @@ public class Main {
 
         System.out.println("============================");
 
+        System.out.println("CREAMOS EL CLIMA1");
         AC ac2 = new AC(10, 30);
         IntStream.range(0, 4).forEach(i -> ac2.warm());
         IntStream.range(0, 5).forEach(i -> ac2.cool());
