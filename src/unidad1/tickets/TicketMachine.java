@@ -39,9 +39,7 @@ public class TicketMachine {
             giveRemainingMoney(moneyScanner.amount - total);
             printTickets(numberOfTickets);
             this.raisedMoney += total;
-        } else {
-            giveRemainingMoney(moneyScanner.amount);
-        }
+        } else giveRemainingMoney(moneyScanner.amount);
         moneyScanner.clearAmount();
     }
 
