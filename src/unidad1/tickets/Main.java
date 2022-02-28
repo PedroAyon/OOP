@@ -8,9 +8,13 @@ public class Main {
         TicketMachine ticketMachine = new TicketMachine(30);
         ticketMachine.insertMoney();
         ticketMachine.buyTickets(3);
-        ticketMachine.buyTickets(10);
+        System.out.println();
         ticketMachine.insertMoney();
         ticketMachine.buyTickets(10);
+        System.out.println();
+        ticketMachine.insertMoney();
+        ticketMachine.buyTickets(10);
+        System.out.println();
         ticketMachine.printRaisedMoney();
     }
 }

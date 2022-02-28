@@ -32,15 +32,17 @@ public class TicketMachine {
     }
 
     public void buyTickets(int numberOfTickets) {
-        log("Requested to buy " + numberOfTickets + " tickets");
         numberOfTickets = Utils.positiveNumber(numberOfTickets);
+        double total = numberOfTickets * fee;
+        log("Requested to buy " + numberOfTickets + " tickets, wtih a total of " + Utils.moneyFormat(total));
         if (canBuyTickets(numberOfTickets)) {
-            double total = numberOfTickets * fee;
             giveRemainingMoney(moneyScanner.amount - total);
-            this.raisedMoney += total;
-            moneyScanner.clearAmount();
             printTickets(numberOfTickets);
+            this.raisedMoney += total;
+        } else {
+            giveRemainingMoney(moneyScanner.amount);
         }
+        moneyScanner.clearAmount();
     }
 
     private boolean canBuyTickets(int numberOfTickets) {
