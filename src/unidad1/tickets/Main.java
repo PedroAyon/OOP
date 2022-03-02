@@ -20,5 +20,7 @@ public class Main {
         System.out.println();
 
         ticketMachine.printRaisedMoney();
+
+        System.out.println();
     }
 }
