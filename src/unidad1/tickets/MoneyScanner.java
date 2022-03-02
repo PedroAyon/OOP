@@ -29,7 +29,7 @@ public class MoneyScanner {
     private boolean waitForInputUntilTimeout() throws IOException {
         long startTime = System.currentTimeMillis();
         while (true)
-            if ((System.currentTimeMillis() - startTime) >= inactivitySeconds * 1000L || bufferedReader.ready()) break;
+            if ((System.currentTimeMillis() - startTime) >= inactivitySeconds * 1000 || bufferedReader.ready()) break;
         return bufferedReader.ready();
     }
 

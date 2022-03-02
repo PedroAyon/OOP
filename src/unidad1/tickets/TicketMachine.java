@@ -1,7 +1,6 @@
 package unidad1.tickets;
 
 import java.io.IOException;
-import java.util.stream.IntStream;
 
 /**
  * @author Pedro Ayon
@@ -10,17 +9,17 @@ public class TicketMachine {
     private final MoneyScanner moneyScanner;
     private final double fee;
     private double raisedMoney;
-    private int maxSecondsOfInactivity = 5;
+    private int inactivitySeconds = 5;
 
     public TicketMachine(double fee) {
         this.fee = fee;
-        moneyScanner = new MoneyScanner(maxSecondsOfInactivity);
+        moneyScanner = new MoneyScanner(inactivitySeconds);
     }
 
-    public TicketMachine(double fee, int maxSecondsOfInactivity) {
+    public TicketMachine(double fee, int inactivitySeconds) {
         this.fee = fee;
-        this.maxSecondsOfInactivity = maxSecondsOfInactivity;
-        moneyScanner = new MoneyScanner(maxSecondsOfInactivity);
+        this.inactivitySeconds = inactivitySeconds;
+        moneyScanner = new MoneyScanner(inactivitySeconds);
     }
 
     public void insertMoney() {
@@ -60,7 +59,9 @@ public class TicketMachine {
     }
 
     private void printTickets(int numberOfTickets) {
-        IntStream.range(0, numberOfTickets).forEachOrdered(i -> printTicket());
+        for (int i = 0; i < numberOfTickets; i++) {
+            printTicket();
+        }
     }
 
     private void printTicket() {
