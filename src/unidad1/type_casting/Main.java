@@ -1,4 +1,4 @@
-package unidad1y2.type_casting;
+package unidad1.type_casting;
 
 /**
  * @author Pedro Ayon

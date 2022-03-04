@@ -1,4 +1,4 @@
-package unidad1y2.tickets;
+package unidad1.tickets;
 
 import java.io.IOException;
 

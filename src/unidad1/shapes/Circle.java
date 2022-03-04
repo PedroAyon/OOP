@@ -1,4 +1,4 @@
-package unidad1y2.shapes;
+package unidad1.shapes;
 
 /**
  * @author pedro

@@ -1,4 +1,4 @@
-package unidad1y2.clock;
+package unidad1.clock;
 
 import java.time.LocalTime;
 

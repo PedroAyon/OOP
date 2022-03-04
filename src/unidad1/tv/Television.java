@@ -1,4 +1,4 @@
-package unidad1y2.tv;
+package unidad1.tv;
 
 import java.text.MessageFormat;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package unidad1y2.car;
+package unidad1.car;
 
 /**
  * @author Pedro Ayon

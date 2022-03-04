@@ -1,4 +1,4 @@
-package unidad1y2.fracciones;
+package unidad1.fracciones;
 
 /**
  * @author Pedro Ayon

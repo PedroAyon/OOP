@@ -1,4 +1,4 @@
-package unidad1y2.equation;
+package unidad1.equation;
 
 /**
  * @author Pedro Ayon

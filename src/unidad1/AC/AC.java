@@ -1,4 +1,4 @@
-package unidad1y2.AC;
+package unidad1.AC;
 
 /**
  * @author Pedro Ayon
