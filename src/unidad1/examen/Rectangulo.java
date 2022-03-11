@@ -23,10 +23,10 @@ public class Rectangulo {
     @Override
     public String toString() {
         return "Rectangulo{" +
-               "base =" + base +
-               ", altura =" + altura +
-               ", area =" + this.area() +
-               ", perimetro =" + this.perimetro() +
+               "base=" + base +
+               ", altura=" + altura +
+               ", area=" + this.area() +
+               ", perimetro=" + this.perimetro() +
                '}';
     }
 }
