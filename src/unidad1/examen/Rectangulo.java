@@ -12,8 +12,8 @@ public class Rectangulo {
         this.altura = altura;
     }
 
-    private float area() {
-        return ((float) this.base * this.altura) / 2;
+    private int area() {
+        return this.base * this.altura;
     }
 
     private int perimetro() {
