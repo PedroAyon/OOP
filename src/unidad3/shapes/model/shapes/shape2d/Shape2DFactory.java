@@ -21,14 +21,14 @@ public class Shape2DFactory {
                 case 1 -> new GraphicCircle(getInt, getColor);
                 case 2 -> new GraphicSquare(getInt, getColor);
                 case 3 -> new GraphicTriangle(getInt, getColor);
-                default -> new Shape2D("Nothing", getInt, getColor);
+                default -> null;
             };
         } else {
             return switch (type) {
                 case 1 -> new Circle(getInt, getColor);
                 case 2 -> new Square(getInt, getColor);
                 case 3 -> new Triangle(getInt, getColor);
-                default -> new Shape2D("Nothing", getInt, getColor);
+                default -> null;
             };
         }
     }

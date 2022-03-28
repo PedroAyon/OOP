@@ -9,14 +9,12 @@ import unidad3.shapes.utils.GetInt;
 import static unidad3.shapes.utils.Constants.graphicPaneHeight;
 import static unidad3.shapes.utils.Constants.graphicPaneWidth;
 
-public class Shape3D extends Shape {
+public abstract class Shape3D extends Shape {
     public Shape3D(String name, GetInt getInt, GetColor getColor) {
         super(name, getInt, getColor);
     }
 
-    public double calculateVolume() {
-        return 0;
-    }
+    public abstract double calculateVolume();
 
     @Override
     public void draw(PApplet graphics) {

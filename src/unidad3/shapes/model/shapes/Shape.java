@@ -5,7 +5,7 @@ import unidad3.shapes.model.color.Color;
 import unidad3.shapes.utils.GetColor;
 import unidad3.shapes.utils.GetInt;
 
-public class Shape {
+public abstract class Shape {
     String name;
     public int strokeWeight;
     public Color color;
@@ -17,8 +17,30 @@ public class Shape {
         setSize(getInt);
     }
 
+    public abstract void setSize(GetInt getInt);
+
     public String getName() {
         return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Color getColor() {
+        return this.color;
+    }
+
+    public void setColor(GetColor getColor) {
+        this.color = getColor.get();
+    }
+
+    public void setStrokeWeight(int strokeWeight) {
+        this.strokeWeight = strokeWeight;
+    }
+
+    public int getStrokeWeight() {
+        return strokeWeight;
     }
 
     public void draw() {
@@ -28,12 +50,5 @@ public class Shape {
     public void draw(PApplet graphics) {
         graphics.stroke(255);
         graphics.strokeWeight(this.strokeWeight);
-    }
-
-    public void setSize(GetInt getInt) {
-    }
-
-    public void setColor(GetColor getColor) {
-        this.color = getColor.get();
     }
 }

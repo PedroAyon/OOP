@@ -21,14 +21,14 @@ public class Shape3DFactory {
                 case 1 -> new GraphicCube(getInt, getColor);
                 case 2 -> new GraphicPyramid(getInt, getColor);
                 case 3 -> new GraphicSphere(getInt, getColor);
-                default -> new Shape3D("Nothing" ,getInt, getColor);
+                default -> null;
             };
         } else {
             return switch (type) {
                 case 1 -> new Cube(getInt, getColor);
                 case 2 -> new Pyramid(getInt, getColor);
                 case 3 -> new Sphere(getInt, getColor);
-                default -> new Shape3D("Nothing" ,getInt, getColor);
+                default -> null;
             };
         }
     }

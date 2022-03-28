@@ -14,7 +14,7 @@ public class ShapeFactory {
         return switch (type) {
             case 2 -> Shape2DFactory.create(graphic, getInt, getColor);
             case 3 -> Shape3DFactory.create(graphic, getInt, getColor);
-            default -> new Shape("Nothing", getInt, getColor);
+            default -> null;
         };
     }
 }

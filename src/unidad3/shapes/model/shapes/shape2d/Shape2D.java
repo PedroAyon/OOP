@@ -5,7 +5,7 @@ import unidad3.shapes.model.shapes.Shape;
 import unidad3.shapes.utils.GetColor;
 import unidad3.shapes.utils.GetInt;
 
-public class Shape2D extends Shape {
+public abstract class Shape2D extends Shape {
     public Shape2D(String name, GetInt getInt, GetColor getColor) {
         super(name, getInt, getColor);
     }
@@ -16,11 +16,7 @@ public class Shape2D extends Shape {
         graphics.fill(color.getR(), color.getG(), color.getB());
     }
 
-    public double calculateArea() {
-        return 0;
-    }
+    public abstract double calculateArea();
 
-    public double calculatePerimeter() {
-        return 0;
-    }
+    public abstract double calculatePerimeter();
 }
