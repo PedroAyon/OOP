@@ -13,6 +13,6 @@ public abstract class Weapon extends Tool {
 
     @Override
     public void onMine(Block block) {
-        System.out.println("Mining with a " + this.getClass().getSimpleName() + " seems to be a bad idea");
+        System.out.println("Mining with a " + this.getClass().getSimpleName() + " seems like a bad idea");
     }
 }

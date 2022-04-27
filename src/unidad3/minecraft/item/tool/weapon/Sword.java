@@ -9,6 +9,7 @@ public class Sword extends Weapon {
         super(type.name().toLowerCase(), "textures/items/tools/weapons/sword.png");
         this.type = type;
     }
+
     @Override
     public Integer getDamage() {
         return switch (type) {
