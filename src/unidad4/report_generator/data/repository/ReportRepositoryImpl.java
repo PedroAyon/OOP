@@ -11,7 +11,7 @@ public class ReportRepositoryImpl implements unidad4.report_generator.domain.rep
     }
 
     @Override
-    public void generateReport(Report report) {
+    public void generateReport(Report report) throws Exception {
         reporter.generateReport(report);
     }
 }

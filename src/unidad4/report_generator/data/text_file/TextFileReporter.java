@@ -5,9 +5,7 @@ import unidad4.report_generator.domain.model.Reporter;
 import unidad4.report_generator.utils.Utils;
 
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -15,17 +13,11 @@ public class TextFileReporter implements Reporter {
     private String dateFormatted;
 
     @Override
-    public void generateReport(Report report) {
+    public void generateReport(Report report) throws Exception {
         dateFormatted = Utils.DateFormatter.dateToString(report.date());
         String filePath = generateFilePath(report);
-        try {
-            Files.createFile(Paths.get(filePath));
-            writeReport(report, filePath);
-        } catch (FileAlreadyExistsException e) {
-            System.out.println("Report already exists");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        Files.createFile(Paths.get(filePath));
+        writeReport(report, filePath);
     }
 
     private String generateFilePath(Report report) {

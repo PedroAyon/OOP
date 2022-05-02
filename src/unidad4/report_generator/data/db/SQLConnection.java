@@ -1,6 +1,8 @@
 package unidad4.report_generator.data.db;
 
+import java.sql.SQLException;
+
 public interface SQLConnection {
-    void connect();
-    void runStatement(String sql);
+    void connect() throws Exception;
+    void runStatement(String sql) throws SQLException;
 }

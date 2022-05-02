@@ -4,15 +4,12 @@ import unidad4.report_generator.domain.model.Report;
 import unidad4.report_generator.domain.model.Reporter;
 import unidad4.report_generator.utils.Utils;
 
-public class DBReporter implements Reporter {
-    private SQLConnection db;
+import java.sql.SQLException;
 
-    public DBReporter(SQLConnection db) {
-        this.db = db;
-    }
+public record DBReporter(SQLConnection db) implements Reporter {
 
     @Override
-    public void generateReport(Report report) {
+    public void generateReport(Report report) throws SQLException {
         db.runStatement(generateSQLQuery(report));
     }
 
