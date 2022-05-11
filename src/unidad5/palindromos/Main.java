@@ -1,5 +1,6 @@
 package unidad5.palindromos;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -17,8 +18,14 @@ public class Main {
 
     public static void palindromo(String str) throws NoPalindromoException {
         str = str.replaceAll(" ", "");
-        for (int izq = 0, der = str.length() - 1; izq + 1 <= der; izq++, der--)
-            if (str.charAt(izq) != str.charAt(der))
+        str = str.toLowerCase(Locale.ROOT);
+
+//        for (int izq = 0, der = str.length() - 1; izq + 1 <= der; izq++, der--)
+//            if (str.charAt(izq) != str.charAt(der))
+//                throw new NoPalindromoException("La frase no es un palindromo");
+
+        for (int i = 0; i < str.length() / 2; i++)
+            if (str.charAt(i) != str.charAt(str.length() - i - 1))
                 throw new NoPalindromoException("La frase no es un palindromo");
     }
 }
