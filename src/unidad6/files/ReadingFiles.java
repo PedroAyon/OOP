@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * @author Denisse
  */
-public class TextFileWritter {
+public class ReadingFiles {
     public static void main(String[] args) {
         FileWriter fichero = null;
         PrintWriter pw;
