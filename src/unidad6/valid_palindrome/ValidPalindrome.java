@@ -13,7 +13,6 @@ public class ValidPalindrome {
             PrintWriter printWriter = new PrintWriter(fileWriter);
             ArrayList<String> phrases = readInput();
             for (String s : phrases) {
-                System.out.println(s);
                 try {
                     checkValidPalindrome(s);
                     printWriter.write('"' + s.toUpperCase() + '"' + " is a valid palindrome.\n");
